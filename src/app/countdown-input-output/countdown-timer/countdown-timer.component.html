@@ -1,0 +1,13 @@
+<mat-card class="timer-card">
+    <h2>Countdown Timer</h2>
+    <h3 *ngIf="timer >= 0;else initialState ">
+        <span>
+            {{timer}}
+        </span>
+    </h3>
+    <ng-template #initialState>
+        <h4>
+            Please start timer!
+        </h4>
+    </ng-template>
+</mat-card>

@@ -1,0 +1,52 @@
+.container{
+    min-height: 100vh;
+
+}
+.products-filter{
+    // background-color: dodgerblue;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    // column-gap: 50vw;
+}
+
+.sort{
+    display: flex;
+    margin: 0px 20px;
+    font-size: 20px;
+    column-gap: 20px;
+    margin-left: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+h1{
+    margin: 30px;
+}
+
+
+.products-section{
+    // width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.grid-view{
+    width: 25% !important;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-view{
+    width: 50% !important;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

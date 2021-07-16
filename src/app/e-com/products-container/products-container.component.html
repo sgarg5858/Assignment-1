@@ -1,0 +1,43 @@
+
+
+<ng-container *ngIf="(sortedProducts$ | async) as products;else Loading">
+    
+    
+    <nav class="products-filter">
+        <h1>E-COM</h1>
+        <div class="sort">
+
+          <mat-button-toggle-group  [(value)]="listType" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="grid">Grid</mat-button-toggle>
+            <mat-button-toggle value="list">List</mat-button-toggle>
+          </mat-button-toggle-group>
+        
+              <mat-form-field appearance="fill">
+                <mat-label>Sort By Price:</mat-label>
+                <mat-select [(value)]="sortOrder" (selectionChange)="sortByPrice($event)">
+                  <mat-option value="0">Recommended</mat-option>
+                  <mat-option value="1">Price: Low to High</mat-option>
+                  <mat-option value="-1" >Price: High to Low</mat-option>
+                </mat-select>
+              </mat-form-field>
+        
+          </div>
+    </nav>
+
+
+    <div class="container">
+       <div class="products-section">
+        <app-product [class]="listType == 'list' ? 'list-view':'grid-view' " *ngFor="let product of products;trackBy:trackById" [product]="product">
+        </app-product>
+       
+       </div>
+    </div>
+    <div  *ngIf="products.length == 0">
+        <h1>Something went wrong. Please try again!</h1>
+    </div>
+</ng-container>
+<ng-template #Loading>
+    <div  style="display: flex;justify-content: center;align-items: center;height: 100vh;width: auto;">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>

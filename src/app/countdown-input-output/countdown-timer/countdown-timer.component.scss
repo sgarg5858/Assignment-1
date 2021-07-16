@@ -1,0 +1,30 @@
+.timer-card{
+    box-sizing: border-box;
+    width: 90%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px lightgray;
+    padding-top: 50px;
+}
+h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+h3 span{
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+h4{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}

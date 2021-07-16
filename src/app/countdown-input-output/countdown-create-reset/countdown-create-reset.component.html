@@ -1,0 +1,20 @@
+<mat-card class="timerCreator">
+    <form class="myTimerForm">
+        <mat-form-field >
+            <mat-label >Enter Timer Duration:</mat-label>
+            <input matInput type="number" [formControl]="newTimer" [disableControl]="timer >= 0">
+            <mat-hint>Timer value must be greater than 0</mat-hint>
+        </mat-form-field>
+        <div class="mybuttons">
+            <button type="button" mat-raised-button color="primary" (click)="createOrPauseTimer()">
+                {{timer == -1 || isTimerPaused ? 'Start' : 'Pause'}}
+            </button>
+            <button [disabled]="timer == -1" type="button" style="margin-left: 20px;" mat-raised-button color="primary" (click)="resetTimer()">Reset</button>
+        </div>
+    </form>
+    <ul *ngIf="pausedTimer && pausedTimer.length>0" style="max-height: 60px;overflow: auto;">
+        <li [@list] *ngFor="let paused of pausedTimer;let i=index" style="list-style:none ;">
+           {{i+1}}. &nbsp; Paused at {{paused}}
+        </li>
+    </ul>
+</mat-card>

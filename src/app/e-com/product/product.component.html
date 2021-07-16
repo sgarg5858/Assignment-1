@@ -1,0 +1,16 @@
+<ng-container *ngIf="product">
+    <mat-card [@fade]>
+       <mat-card-header>
+        <mat-card-subtitle>
+            {{product?.title}}
+        </mat-card-subtitle>
+       </mat-card-header>
+       <mat-spinner diameter="20" *ngIf="!imageLoaded"></mat-spinner>
+       <img height="180" loading="lazy" (load)="imageLoad()" width="200" [src]="product.image" alt="Product Image">
+       <mat-card-content style="margin-top: 5px;">
+           <h2>
+               {{product?.price | currency :'USD'}}
+           </h2>
+       </mat-card-content>
+    </mat-card>
+</ng-container>

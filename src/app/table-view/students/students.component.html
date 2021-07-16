@@ -1,0 +1,33 @@
+<ng-container *ngIf="(myStudents$ | async) as students;else loadingSpinner">
+    <div class="container">
+        <table SortableTable (sorted)="onSorted($event)">
+            <thead>
+                <tr>
+                    <th sortable-column="Id">Id</th>
+                    <th sortable-column="Name">
+                        Name
+                    </th>
+                    <th sortable-column="Class">Class</th>
+                    <th sortable-column="Section">Section</th>
+                    <th sortable-column="Subject1">Subject1</th>
+                    <th sortable-column="Subject2">Subject2</th>
+                    <th sortable-column="Subject3">Subject3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students"> 
+                    <td>{{student.Id}}</td>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Class}}</td>
+                    <td>{{student.Section}}</td>
+                    <td>{{student.Subject1}}</td>
+                    <td>{{student.Subject2}}</td>
+                    <td>{{student.Subject3}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>
+<ng-template #loadingSpinner>
+    <h1>Loading........</h1>
+</ng-template>

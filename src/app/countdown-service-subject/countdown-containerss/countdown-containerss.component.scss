@@ -1,0 +1,88 @@
+.countdown-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.container-card{
+    min-height: 90vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    box-shadow: 1px 1px 10px lightgray;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.first-row
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+app-countdown-timerss{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+app-countdown-create-resetss{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+app-countdown-logsss{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    padding-left: 20px;
+    min-height: 200px;
+
+    box-sizing: border-box;
+}
+app-countdown-click-trackerss{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    padding-left: 20px;
+    min-height: 200px;
+    // align-items: center;
+
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 680px) {
+    .countdown-container{
+        flex-direction: column !important; 
+    }
+    .first-row{
+        flex-direction: column !important;
+    }
+    app-countdown-timerss{
+        width: 100%;
+    }
+    app-countdown-create-resetss{
+        width: 100%;
+        margin-top: 20px;
+    }
+    app-countdown-logsss{
+        width: 100%;
+        margin-top: 20px;
+    }
+    app-countdown-click-trackerss{
+        width: 100%;
+    }
+    
+}

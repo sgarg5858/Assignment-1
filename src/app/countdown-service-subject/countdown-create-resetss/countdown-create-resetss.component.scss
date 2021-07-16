@@ -1,0 +1,17 @@
+.mybuttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.myTimerForm{
+    display: flex;
+    flex-direction: column;
+}
+.timerCreator{
+    max-height: 200px;
+    height: 200px;
+    width: 90%;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px lightgray;
+}

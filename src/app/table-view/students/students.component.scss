@@ -1,0 +1,33 @@
+.container{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+tr th{
+     background-color: lightskyblue;
+}
+table,th,td{
+    border: 2px solid dodgerblue;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 14px 20px;
+    text-align: center;
+    color: darkblue;
+    width:80px;
+}
+tr:nth-child(2n)
+{
+    background-color: lightskyblue;
+    border: 2px solid white
+}
+th{
+    height: 40px;
+}
+
+a{
+    cursor: pointer;
+}

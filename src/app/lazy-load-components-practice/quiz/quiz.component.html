@@ -1,0 +1,8 @@
+<mat-card>
+    <form>
+        <mat-form-field>
+            <input matInput type="text" [formControl]="nameControl">
+        </mat-form-field>
+        <button mat-stroked-button (click)="submitName()" color="primary">Submit</button>
+    </form>
+</mat-card>

@@ -1,0 +1,12 @@
+<h2>Click Logs:</h2>
+
+<div *ngIf="clickLogs && (clickLogs.started || clickLogs.paused) " style="display: flex;">
+    <div style="display: flex;flex-direction: column;">
+        <h3 >{{clickLogs.started}}</h3>
+        <p>Started</p>
+    </div>
+    <div style="display: flex;flex-direction: column;margin-left: 50px;">
+        <h3 >{{clickLogs.paused}}</h3>
+        <p>Paused</p>
+    </div>
+</div>

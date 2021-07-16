@@ -1,0 +1,8 @@
+<div style="display: flex;justify-content: center;cursor: pointer;">
+    <!-- Content Projection -->
+    <ng-content></ng-content>
+    <!-- Then Show Icon -->
+    <mat-icon *ngIf="sortDirection" style="margin-left: 2px;">
+        {{sortDirection === 'asc' ? 'arrow_upward' :'arrow_downward'}}
+    </mat-icon>
+</div>

@@ -1,0 +1,26 @@
+<div class="countdown-container">
+
+    <mat-card class="container-card">
+        <div class="first-row">
+            <div class="item">
+                <app-countdown-timer [timer]="timer"></app-countdown-timer>
+            </div>
+            <div class="item">
+                <app-countdown-create-reset
+                [timer]="timer"
+                [isTimerPaused]="isTimerPaused"
+                (timerChange)="timerChange($event)"
+                ></app-countdown-create-reset>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="item">
+                <app-countdown-logs [eventLogs]="eventLogs"></app-countdown-logs>
+            </div>
+            <div class="item">
+                <app-countdown-click-tracker [clickLogs]="clickLogs"></app-countdown-click-tracker>
+            </div>
+        </div>
+    </mat-card>
+
+</div>

@@ -1,0 +1,25 @@
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 20px;
+    flex-grow: 1;
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+    display: block;
+}
+ul li a{
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: dodgerblue;
+}
+
+
+ul li a.active
+{
+    color:white ;
+    background-color: dodgerblue;
+}

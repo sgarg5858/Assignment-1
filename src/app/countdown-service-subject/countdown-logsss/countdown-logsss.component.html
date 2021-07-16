@@ -1,0 +1,9 @@
+<h2 style="margin-top: 20px;">Countdown Logs:</h2>
+
+<ng-container *ngIf="(eventLogs$ | async) as eventLogs">
+    <ul style="max-height: 120px;overflow-y: auto;">
+        <li [@list] *ngFor="let event of eventLogs;trackBy:trackByEventId ;let i=index">
+            {{event.eventType}} at {{event.eventTime | date : 'medium'}}
+        </li>
+    </ul>
+</ng-container>

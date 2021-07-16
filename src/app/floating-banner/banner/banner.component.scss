@@ -1,0 +1,33 @@
+.container{
+    height: 90vh;
+    width: 100%;
+}
+
+div.centerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-box{
+    height: 450px;
+    width: 800px;
+}
+.inner-box{
+    height: 85%;
+    width: 92%;
+}
+
+.borderDiv{
+    border: 4px solid black;
+}
+.rotatingText{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: dodgerblue;
+
+}
